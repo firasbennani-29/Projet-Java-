@@ -12,23 +12,23 @@ Projet élaboré par : Bennani Firas ( 1TA3 )
 Projet : Pipeline de Reconnaissance d'Images MNIST avec Java et Weka API
 Mise en œuvre d'un classifieur intelligent capable de distinguer des chiffres manuscrits complexes. Le projet couvre l'intégralité du cycle de vie des données : du prétraitement des fichiers MNIST à la prédiction en temps réel via une interface graphique interactive. L'aspect technique repose sur l'implémentation de modèles de Machine Learning au sein d'un environnement Java, garantissant une exécution performante et une gestion rigoureuse des ressources système.
 
-## 📌 Aperçu du Projet :
+##  Aperçu du Projet :
 
 ### Partie 1 : Architecture POO & Traitement de Fichiers
 Traitement et conversion multi-format du dataset MNIST (IDX vers CSV, Excel, PNG, ARFF) via une architecture modulaire (`DataProcessor`, `MNISTProvider`, `ExcelExporter`)
 
-### 🔹 Partie 2 : Gestion des Exceptions Personnalisées
+###  Partie 2 : Gestion des Exceptions Personnalisées
 Gestion d'erreurs robuste via 3 exceptions personnalisées (`InvalidDimensionsException`, `MNISTFileNotFoundException`, `DataFormatMismatchException`) pour la validation et l'intégrité des données MNIST.
 
-### 🔹 Partie 3 : IA & Polymorphisme (Intégration Weka)
+###  Partie 3 : IA & Polymorphisme (Intégration Weka)
 Classification via Naïve Bayes et Random Forest (ML qui utilisent Weka) utilisant un design polymorphe pour l'interchangeabilité et la comparaison de performance des modèles, en utilisant les classes `DigitClassifier`, `NaiveBayesClassifier`, `RandomForestClassifier`, `ModelComparator`
 
-### 🔹 Partie 4 : Interface Graphique (Reconnaissance en Temps Réel)
+###  Partie 4 : Interface Graphique (Reconnaissance en Temps Réel)
 Interface interactive `RecognitionGUI` avec canvas de dessin `DrawingCanvas`, incluant un prétraitement d'image (280x280 vers 28x28) et la prédiction en temps réel.
 
 ---
 
-## 📁 Structure du Projet
+##  Structure du Projet
 TP JAVA PROJECT/
 ├── src/
 │ ├── main/java/com/example/
@@ -47,7 +47,7 @@ TP JAVA PROJECT/
 
 ---
 
-## ⚙️ Prérequis
+## Les Prérequis
 
 - Java 11+ (compatible Java 21)
 - Maven 3.6+
