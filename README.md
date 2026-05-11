@@ -1,47 +1,34 @@
-# 🧠 Handwritten Digit Recognition System (MNIST 3 vs 5)
+# Système de Reconnaissance de Chiffres Manuscrits : MNIST 3 vs 5
 
 ![Java](https://img.shields.io/badge/Java-11%2B-orange)
 ![Maven](https://img.shields.io/badge/Maven-3.9.5-blue)
 ![Weka](https://img.shields.io/badge/ML-Weka-yellow)
 ![Status](https://img.shields.io/badge/Project-Completed-brightgreen)
 
-A complete Java project implementing machine learning-based recognition of handwritten digits (distinguishing "3" from "5") using the MNIST dataset. This project demonstrates advanced Object-Oriented Programming design, exception handling, machine learning integration with Weka, and GUI development using Swing.
+Instructeur : Mohamed Mahmoud Moussa
+Institution : École Nationale des Sciences et Technologies Avancées de Borj-Cédria
+Projet élaboré par : Bennani Firas ( 1TA3 ) 
 
-**Course**: Programmation Orientée Objet : Java (1TA3)  
-**Instructor**: Mohamed Mahmoud Moussa  
-**Institution**: ENSTAB (École Nationale des Sciences et Technologies Avancées de Borj-Cédria)  
-**Academic Year**: 2025/2026  
+Projet : Pipeline de Reconnaissance d'Images MNIST avec Java et Weka API
+Mise en œuvre d'un classifieur intelligent capable de distinguer des chiffres manuscrits complexes. Le projet couvre l'intégralité du cycle de vie des données : du prétraitement des fichiers MNIST à la prédiction en temps réel via une interface graphique interactive. L'aspect technique repose sur l'implémentation de modèles de Machine Learning au sein d'un environnement Java, garantissant une exécution performante et une gestion rigoureuse des ressources système.
 
----
+## 📌 Aperçu du Projet :
 
-## 📌 Project Overview (4 Parts)
+### Partie 1 : Architecture POO & Traitement de Fichiers
+Traitement et conversion multi-format du dataset MNIST (IDX vers CSV, Excel, PNG, ARFF) via une architecture modulaire (`DataProcessor`, `MNISTProvider`, `ExcelExporter`)
 
-### 🔹 Part 1: OOP Architecture & File Processing
-- Parsing MNIST binary format (IDX3 / IDX1)
-- Conversion between multiple formats: binary → CSV → Excel → PNG → ARFF
-- Core classes: `DataProcessor`, `MNISTProvider`, `BinaryMNISTReader`, `TextFileHandler`, `ExcelExporter`
+### 🔹 Partie 2 : Gestion des Exceptions Personnalisées
+Gestion d'erreurs robuste via 3 exceptions personnalisées (`InvalidDimensionsException`, `MNISTFileNotFoundException`, `DataFormatMismatchException`) pour la validation et l'intégrité des données MNIST.
 
-### 🔹 Part 2: Custom Exception Handling
-- Implementation of 3 checked exceptions
-- Clear and detailed error messages
-- Classes: `InvalidDimensionsException`, `MNISTFileNotFoundException`, `DataFormatMismatchException`
+### 🔹 Partie 3 : IA & Polymorphisme (Intégration Weka)
+Classification via Naïve Bayes et Random Forest (ML qui utilisent Weka) utilisant un design polymorphe pour l'interchangeabilité et la comparaison de performance des modèles, en utilisant les classes `DigitClassifier`, `NaiveBayesClassifier`, `RandomForestClassifier`, `ModelComparator`
 
-### 🔹 Part 3: AI & Polymorphism (Weka Integration)
-- Machine learning models using Weka:
-  - Naïve Bayes
-  - Random Forest
-- Polymorphic design for model interchangeability
-- Classes: `DigitClassifier`, `NaiveBayesClassifier`, `RandomForestClassifier`, `ModelComparator`
-
-### 🔹 Part 4: GUI (Real-time Recognition)
-- Interactive drawing canvas (280×280 → 28×28 preprocessing)
-- Real-time digit prediction
-- Model selection interface
-- Classes: `DrawingCanvas`, `RecognitionGUI`
+### 🔹 Partie 4 : Interface Graphique (Reconnaissance en Temps Réel)
+Interface interactive `RecognitionGUI` avec canvas de dessin `DrawingCanvas`, incluant un prétraitement d'image (280x280 vers 28x28) et la prédiction en temps réel.
 
 ---
 
-## 📁 Project Structure
+## 📁 Structure du Projet
 TP JAVA PROJECT/
 ├── src/
 │ ├── main/java/com/example/
@@ -60,17 +47,17 @@ TP JAVA PROJECT/
 
 ---
 
-## ⚙️ Prerequisites
+## ⚙️ Prérequis
 
-- Java 11+ (Java 21 compatible)
+- Java 11+ (compatible Java 21)
 - Maven 3.6+
-- MNIST Dataset (download required)
+- MNIST Dataset (téléchargement requis)
 
 ---
 
-##  Quick Start
+##  Démarrage Rapide
 
-### 1. Build the project
+###  Build the project
 ```bash
 ./tools/apache-maven-3.9.5/bin/mvn clean compile
 1. Download MNIST dataset and place in data/mnist/
